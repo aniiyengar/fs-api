@@ -1,0 +1,45 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "watch:build": "./node_modules/webpack/bin/webpack.js --watch",
+    "watch:server": "sleep 3 && ./node_modules/nodemon/bin/nodemon.js ./dist/bundle.js --watch ./src",
+    "dev": "./node_modules/npm-run-all/bin/npm-run-all/index.js --parallel watch:build watch:server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.0",
+    "@babel/preset-env": "^7.10.0",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.8.2",
+    "auth0": "^2.25.1",
+    "aws-sdk": "^2.685.0",
+    "aws4": "^1.10.0",
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^2.2.0",
+    "lru-cache": "^5.1.1",
+    "lru_map": "^0.3.3",
+    "moment": "^2.26.0",
+    "node-cron": "^2.0.3",
+    "node-tesseract-ocr": "^1.0.0",
+    "priorityqueue": "^1.0.0",
+    "tesseract.js": "^2.1.1",
+    "twit": "^2.2.11",
+    "url-metadata": "^2.4.0"
+  }
+}
